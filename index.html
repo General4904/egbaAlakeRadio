@@ -14,11 +14,17 @@
 </head>
 
 <body
-  class="font-[Roboto] min-h-screen bg-[#0e1a0d] bg-[radial-gradient(circle_at_50%_0%,#2c5226_0%,#0e1a0d_62%)] text-[#f3ecd6] py-[1em] px-[1em] grid">
+  class="font-[Roboto] min-h-screen bg-[#0e1a0d] bg-[radial-gradient(circle_at_50%_0%,#2c5226_0%,#0e1a0d_62%)] text-[#f3ecd6] py-[1em] px-[1em] pb-0 grid">
   <div class="app min-w-10/12 flex flex-col items-center gap-[5em]">
     <header class="flex justify-between items-center w-full">
-      <h1>Egbaalake Radio</h1>
-      <p>Live</p>
+      <h1 class="text-green-300">Egbaalake Radio</h1>
+      <div class="flex">
+        <span class="pulse-icon relative hidden size-3">
+          <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-200 opacity-75"></span>
+          <span class="relative inline-flex size-3 rounded-full bg-green-300"></span>
+        </span>
+        <p class="live text-gray-500">Live</p>
+      </div>
     </header>
 
     <div
@@ -95,6 +101,10 @@
         <!-- Triangle (nudged right so it looks optically centered) -->
         <path d="M33 26 L56 40 L33 54 Z" fill="#0e1a0d" stroke="#0e1a0d" stroke-width="4" stroke-linejoin="round" />
       </svg>
+    </div>
+    <div class="attribution mt-auto text-center border-t w-full border-t-gray-400">
+      <p class="text-[10px]">Egbaalake Radio &copy; 2026</p>
+      <p class="text-[10px]">Powered by FF Tronics Inc &copy;</p>
     </div>
   </div>
   <script type="module" src="src/scripts/script.js"></script>
