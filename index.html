@@ -1,236 +1,103 @@
-﻿<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width,initial-scale=1" />
-		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="style.css" />
-		<link rel="shortcut icon" href="images/EgbaAlake.jpg" type="image/x-icon" />
-		<meta name="format-detection" content="telephone=no" />
-		<title>EgbaAlake</title>
-	</head>
+<!doctype html>
+<html lang="en">
 
-	<body>
-				 <header class="container-fluid">
-			<nav id="header-nav" class="navbar navbar-default">
-					<div class="navbar-header">
-						<a href="index.html"
-							><img
-								src="images/egbaAlake.jpg"
-								id="logo"
-								class="visible-md visible-lg"
-						/></a>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/src/assets/images/EgbaAlake.jpg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link href="/src/style.css" rel="stylesheet">
+  <title>Egbaalake Radio</title>
+</head>
 
-						<div class="navbar-brand">
-							<a href="index.html"><h1>EgbaAlake Radio&trade;</h1></a>
-						</div>
+<body
+  class="font-[Roboto] min-h-screen bg-[#0e1a0d] bg-[radial-gradient(circle_at_50%_0%,#2c5226_0%,#0e1a0d_62%)] text-[#f3ecd6] py-[1em] px-[1em] grid">
+  <div class="app min-w-10/12 flex flex-col items-center gap-[5em]">
+    <header class="flex justify-between items-center w-full">
+      <h1>Egbaalake Radio</h1>
+      <p>Live</p>
+    </header>
 
-						<button
-							type="button"
-							class="navbar-toggle collapsed"
-							data-toggle="collapse"
-							data-target="#collapsable-nav"
-							aria-expanded="false"
-						>
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-					</div>
+    <div
+      class="audio-card rounded-md w-full p-[1em] gap-[2em] flex flex-col justify-center items-center bg-linear-to-b from-[#0e1a0d] to-[#2c5226]">
+      <audio class="max-w-[97%] hidden" controls>
+        <source src="https://centova47.instainternet.com/proxy/egbaalak?mp=/stream" type="audio/mp3">
+        Your browser does not support the audio element.
+      </audio>
+      <svg class="vinyl w-[65%]" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img"
+        aria-label="Spinning vinyl record">
+        <defs>
+          <!-- Round crop for the logo label -->
+          <clipPath id="labelClip">
+            <circle cx="100" cy="100" r="34" />
+          </clipPath>
 
-					<div id="collapsable-nav" class="collapse navbar-collapse">
-						<ul id="nav-list" class="nav navbar-nav navbar-right">
-							<li><a href="index.html"> Home </a></li>
-							<li><a href="library/library.html"> Library </a></li>
-							<li><a href="news/news.html"> NEWS </a></li>
-						</ul>
-					</div>
+          <!-- Light reflection across the record -->
+          <linearGradient id="shine" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#fff" stop-opacity="0" />
+            <stop offset=".25" stop-color="#fff" stop-opacity=".12" />
+            <stop offset=".5" stop-color="#fff" stop-opacity="0" />
+            <stop offset=".75" stop-color="#fff" stop-opacity=".08" />
+            <stop offset="1" stop-color="#fff" stop-opacity="0" />
+          </linearGradient>
+        </defs>
 
+        <!-- Record body -->
+        <circle cx="100" cy="100" r="98" fill="#111" />
 
-		</header>
+        <!-- Grooves -->
+        <g fill="none" stroke="#2a2a2a" stroke-width="1">
+          <circle cx="100" cy="100" r="90" />
+          <circle cx="100" cy="100" r="84" />
+          <circle cx="100" cy="100" r="78" />
+          <circle cx="100" cy="100" r="72" />
+          <circle cx="100" cy="100" r="66" />
+          <circle cx="100" cy="100" r="60" />
+          <circle cx="100" cy="100" r="54" />
+          <circle cx="100" cy="100" r="48" />
+        </g>
 
-		<div id="time"></div>
+        <!-- Track gap rings -->
+        <circle cx="100" cy="100" r="69" fill="none" stroke="#000" stroke-width="2" opacity=".6" />
+        <circle cx="100" cy="100" r="51" fill="none" stroke="#000" stroke-width="2" opacity=".6" />
 
-		<div id="intro">
-			<p>
-				Hello World! This is your favourite radio station,
-				<b>EgbaAlake Radio</b>. We keep you <i>fresh</i> by bringing 200%
-				entertainment at your finger tips. Your traditional Yoruba music which
-				you have been willing to listen to are all here.
-			</p>
-		</div>
+        <!-- Shine -->
+        <circle cx="100" cy="100" r="98" fill="url(#shine)" />
 
-		<!-- <div id="panel"><a href="library/library.html"> Music Library </a></div> -->
+        <!-- Label: green base + logo -->
+        <circle cx="100" cy="100" r="34" fill="#6fb352" />
+        <image href="src/assets/images/EgbaAlake.jpg" x="66" y="66" width="68" height="68" clip-path="url(#labelClip)"
+          preserveAspectRatio="xMidYMid slice" />
+        <circle cx="100" cy="100" r="34" fill="none" stroke="#e8b84a" stroke-width="1.5" />
 
-		<div id= "centova">
-       <h2> Listen Now </h2>
+        <!-- Center hole -->
+        <circle cx="100" cy="100" r="4" fill="#0e1a0d" />
+      </svg>
 
-<audio controls>
-<source src= "https://centova47.instainternet.com/proxy/egbaalak?mp=/stream" type= "audio/mp3">
-Your browser does not support the audio element.
-</audio> 
-</div>
+      <svg class="play-icon" width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" role="img"
+        aria-label="Play">
+        <defs>
+          <radialGradient id="goldGrad" cx="35%" cy="30%" r="80%">
+            <stop offset="0" stop-color="#f6d27a" />
+            <stop offset="1" stop-color="#e8b84a" />
+          </radialGradient>
+        </defs>
 
-		<div id="monument">
-			<h2>Monuments & Artefacts</h2>
+        <!-- Outer ring -->
+        <circle cx="40" cy="40" r="38" fill="none" stroke="#e8b84a" stroke-opacity=".35" stroke-width="2" />
 
-			<h2 id="Yoruba"><u> The Yoruba Culture </u></h2>
+        <!-- Button -->
+        <circle cx="40" cy="40" r="33" fill="url(#goldGrad)" />
 
-			<h3>Before Oyo Empire:</h3>
+        <!-- Triangle (nudged right so it looks optically centered) -->
+        <path d="M33 26 L56 40 L33 54 Z" fill="#0e1a0d" stroke="#0e1a0d" stroke-width="4" stroke-linejoin="round" />
+      </svg>
+    </div>
+  </div>
+  <script type="module" src="src/scripts/script.js"></script>
+</body>
 
-			<!-- <figure id="olokun"><img src="images/ori_olokun.jpg" /><figcaption>Ori Olokun</figcaption></figure>-->
-			<p>
-				The history of the Yoruba people begins in Ile-Ife(Ife Empire). This
-				kingdom was founded by the deity Oduduwa, who is believed to have
-				created the world. Oduduwa was the first divine king of the Yoruba
-				people. It is said the Yoruba people believe that their civilization
-				began at Ile-Ife where the gods descended to earth. The Ethnic group
-				became popular internationally due to their trading with the Portuguese
-				which gave them guns for their trade. The Yoruba were invaded by the
-				Fulani in the early 1800s, which pushed the people to the South. In the
-				late 1800s, they formed a treaty with the British Empire and were
-				colonized by Britain beginning in 1901. The people who lived in
-				Yorubaland, at least by the seventh century BC, were not initially known
-				as the Yoruba, although they shared a common ethnicity and language
-				group. The historical Yoruba develop in situ, out of earlier
-				(Mesolithic)Volta-Niger populations, by the 1st millennium BC.
-				Archaeologically, the settlement at Ile-Ife can be dated to the 4th
-				century BC, with urban structures appearing in the 8th-10th Centuries.
-				"Between 700 and 900 A.D., the city began to develop as a major artistic
-				center," And "by the 12thCentury Ife artists were creating bronze,
-				stone, and terracotta sculptures." The phase of Ile-Ife before the rise
-				of Oyo, 1100 - 1600, is sometimes described as a "golden age" of
-				Ile-Ife.
-				<a href="monument.html#continue">Continue Reading....</a>
-			</p>
-		</div>
-
-		<hr />
-
-		<div id="history">
-			<h2>Today in History</h2>
-
-			<ul>
-				<li>
-					On this day in the year 2011, The Iraq War officially ended as the
-					United States formally declared that its mission in the country was
-					over
-				</li>
-
-				<li>
-					In 2001,The Leaning Tower of Pisa reopened in Pisa, Italy, after more
-					than 10 years of work to stabilize the structure
-				</li>
-
-				<li>
-					December 15, 2010 The Micex securities exchange in Moscow begins
-					direct trading between the Russian ruble and the Chinese renminbi
-					(yuan)
-				</li>
-
-				<li>
-					Today in 1997, The U.S. Department of Defense ordered that all
-					Americans in its service (about 2.5 million people) be inoculated
-					against anthrax, a potential weapon of biological warfare.
-				</li>
-
-				<li>
-					Still in 1977, Janet Rosenberg Jagan was elected president of Guyana,
-					becoming the first elected female president in South America andthe
-					first white president of Guyana
-				</li>
-
-				<li>
-					In 37C.E, emperor Nero—who became infamous for his personal
-					debaucheries and extravagances and, on doubtful evidence, for
-					hisburning of Rome and persecutions of Christians—was born.
-				</li>
-			</ul>
-		</div>
-
-		<footer>
-			<div id="info">
-				<div id="badge">
-					<img src="images/EgbaAlake.jpg" alt="EgbaAlake Radio" id="egba" />
-				</div>
-				<ul id="media">
-					Please visit our social media pages:
-					<br />
-
-					<li>
-						Follow us on twitter @
-						<a href="https://www.twitter.com/@EgbaAlake">
-							<img src="icons/twitter.svg" alt="twitter" class="social" />
-						</a>
-					</li>
-
-					<li>
-						Like us on Facebook @
-						<a href="https://www.facebook.com/EgbaAlake">
-							<img src="icons/facebook.svg" alt="facebook" class="social" />
-						</a>
-					</li>
-
-					<li>
-						Enjoy us on Instagram @
-						<a href="https://www.instagram.com/egbaalakeradio">
-							<img src="icons/instagram.svg" alt="instagram" class="social" />
-						</a>
-					</li>
-
-					<li>
-						Subscribe, share and watch us on Youtube @
-						<a href="https://www.youtube.com/EgbaAlake">
-							<img
-								src="icons/images.jpeg"
-								class="social"
-								alt="Youtube"
-								class="social"
-								width="256px"
-								height="256px"
-							/>
-						</a>
-					</li>
-				</ul>
-
-				<div id="adverts">
-					Contact us for adverts or to get a website for your business:
-					<ul>
-						<li>
-							Send us a mail @
-							<a href="mailto: egbaAlakeRadio@gmail.com">
-								<img
-									src="icons/gmail.jpeg"
-									alt="G-Mail"
-									class="social"
-									width="256px"
-									height="256px"
-								/>
-							</a>
-						</li>
-
-						<li>
-							Send us a text @<a href="https://wa.me/message/TKL2SIIXJVR5A1">
-								<img src="icons/whatsapp.jpeg" alt="call" class="social" />
-							</a>
-						</li>
-
-						<li>
-							Call us @<a href="tel:+2347045553796">
-								<img src="icons/call.jpg" alt="call" class="social" />
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<hr />
-			<div id="copy"></div>
-		</footer>
-
-		<!-- jQuery (Bootstrap JS plugins depend on it) -->
-		<script src="js/jquery-1.11.3.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/script.js"></script>
-	</body>
 </html>
